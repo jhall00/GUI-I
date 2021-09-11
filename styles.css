@@ -1,0 +1,78 @@
+#gradient {
+  /*Needed to make div position at the top of page (when I increased font size the whole div moved down)*/
+  /* source :  https://stackoverflow.com/questions/5600516/anchor-a-div-to-top-of-the-browser-window */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  /*source: https://www.w3schools.com/css/css3_gradients.asp*/
+  background-color: #537895;
+  /* Creates a gradient of 2 colors diagonally*/
+  background-image: linear-gradient(to bottom right, #537895, #09203f 74%);
+ }
+
+h1{
+ 
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 60px;
+  color:white;
+  /* Added text shadow to main 'Jessica Hall' header*/
+  text-shadow: 2px 2px #525252;
+  text-align:center;
+  /* Had to adjust line height to get text in the middle of gradient (I think the absolute position of the gradient caused this)*/
+  line-height: 120px;
+}
+
+#musicTable, #me{
+  /*Adjust posiiton so it's under the gradient box*/
+  position: relative;
+  top: 200px;
+}
+
+#musicTable, th, td{
+  border: 1px solid #537895;
+  color: #878a65;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+#pets, #labels{
+  /*position below the gradient and center pictures*/
+  position: relative;
+  top: 10px;
+  text-align: center;
+  color: #878a65;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#petPics{
+  /*position below the gradient and center pictures*/
+  position: relative;
+  top: 10px;
+  text-align: center;
+}
+
+#copper, #chloe{
+  width: 15%;
+}
+
+p{
+  /*allows the two p elements for pet name titles to be on the same line*/
+  display: inline-block;
+}
+#copperLabel{
+  /* push name label to the left to center on top of picture*/
+  padding-right:6%;
+}
+
+#chloeLabel{
+  /* push name label to the right to center on top of picture*/
+  padding-left: 6%;
+}
+
+#me{
+  color: #878a65;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
