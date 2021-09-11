@@ -1,3 +1,14 @@
+/*
+File: styles.css
+Created : September 9, 2021
+GUI Assignment: Creating Your First Web Page
+UMass Lowell Computer Science, jessica_hall1@student.uml.edu
+Copyright (c) 2021 by Jessica. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by JH on September 11, 2021 at 5:08 PM.
+*/
+
+/*Styling for gradient block at top */
 #gradient {
   /*Needed to make div position at the top of page (when I increased font size the whole div moved down)*/
   /* source :  https://stackoverflow.com/questions/5600516/anchor-a-div-to-top-of-the-browser-window */
@@ -12,8 +23,8 @@
   background-image: linear-gradient(to bottom right, #537895, #09203f 74%);
  }
 
+/*Styling the main page header, 'Jessica Hall' */
 h1{
- 
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 60px;
   color:white;
@@ -24,19 +35,21 @@ h1{
   line-height: 120px;
 }
 
+/*Styling for table and 'About Me' header */
 #musicTable, #me{
   /*Adjust posiiton so it's under the gradient box*/
   position: relative;
   top: 200px;
 }
 
+/*Styling for table headers and table data*/
 #musicTable, th, td{
   border: 1px solid #537895;
   color: #878a65;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
 }
 
+/*Styling for pet picture labels and 'MyPets' header */
 #pets, #labels{
   /*position below the gradient and center pictures*/
   position: relative;
@@ -46,6 +59,7 @@ h1{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Styling for the pet pictures div */
 #petPics{
   /*position below the gradient and center pictures*/
   position: relative;
@@ -53,26 +67,34 @@ h1{
   text-align: center;
 }
 
+/* Styling for each pet picture*/
 #copper, #chloe{
   width: 15%;
 }
 
+/*Styling for about me paragraph write-up and the pet name labels*/
 p{
   /*allows the two p elements for pet name titles to be on the same line*/
   display: inline-block;
 }
+
+/*Styling for cat name label */
 #copperLabel{
   /* push name label to the left to center on top of picture*/
   padding-right:6%;
 }
 
+/*Styling for dog name label */
 #chloeLabel{
   /* push name label to the right to center on top of picture*/
   padding-left: 6%;
 }
 
+/* Styling for 'About Me' Header*/
 #me{
-  color: #878a65;
+  color: #7c5604;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+
 
