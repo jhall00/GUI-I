@@ -1,0 +1,130 @@
+/*
+File: pacific.css
+GUI Assignment: Style a Site with External CSS : Given pictures of a website, recreate
+the look with external CSS, no changing the HTML file.
+Created : September 21, 2021
+Jessica Hall, UMass Lowell Computer Science, jessica_hall1@student.uml.edu
+Copyright (c) 2021 by Jessica. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by JH on September 27, 2021 at 3:51 PM
+*/
+
+
+header, hgroup, nav, footer, figure, figcaption, aside, section, article {
+	display: block;
+}
+body {
+	background-image: url("ptrbackground.jpg");
+	background-color: #cccccc;
+	color: #666666;
+	font-family: Arial, Helvetica, sans-serif;
+	/*bottom of background*/
+	margin-bottom: 20%;
+}
+
+#wrapper{
+	/*min width per instructions*/
+	min-width: 600px;
+	width: 80%;
+	/*centers div*/
+	margin: auto;
+	/*Sets color for nav bar baground */
+	background-color: #90c8e3;	
+}
+
+#content ul{
+	/*Sets the bullets as the pciture*/
+	list-style-image: url('marker.gif');
+	/* Inside style position to keep in line with paragraph*/
+	list-style-position: inside;
+}
+
+nav ul {
+	font-size: 1.2em;
+	/*set padding and margins so it matches pictures*/
+	margin-right: 20px;
+	padding-left:20px ;
+	list-style-type: none; /* Remove bullets */
+}
+
+nav{
+	/*puts navigation bar to left*/
+	float: left;
+	font-weight: bold;
+}
+
+nav a:visited {
+	color: #344873;
+}
+
+nav a:hover {
+	color: #bbadad;
+}
+
+nav a {
+	/*Removes underline from links*/
+    text-decoration: none;
+	color: #00094e;
+}
+
+h1 {
+	color: white;
+	margin-bottom: 0;
+	padding: 10px;
+	background-image: url("sunset.jpg");
+	background-color: #000032;
+	/*puts image on right the left is filled with solid background color from above line*/
+	background-position: right;
+	background-repeat: no-repeat;	
+}
+
+h2 {
+	color: #3399CC;
+}
+
+h1,
+h2 {
+	font-family: Georgia, "Times New Roman", serif;
+}
+
+#content{
+	/*Sets background color for main text area*/
+	background-color: white;
+	/* Set margins and padding to match the given look*/
+	margin-left: 175px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.resort{
+	/*Sets color for 'Pacific Trails Resort' text at beginning of text*/
+	color: #627b97;
+	font-weight: bold;
+}
+
+#contact {
+	font-size: 90%;
+}
+
+img{
+	/*allows text to go to right of image*/
+	float: left;
+	padding-right: 40px;
+}
+
+dt {
+	color: #000033;
+}
+
+footer {
+	font-family: Georgia, "Times New Roman", serif;
+	font-style: italic;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	margin-left: 175px;
+	background-color: white;
+	padding-right: 20px;
+}
+
