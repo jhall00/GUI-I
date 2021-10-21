@@ -1,0 +1,77 @@
+/*
+File: styles.css
+Created : October 14, 2021
+GUI Assignment: Creating an Interactive Dynamic Table
+Description: Create a dynamic table based on 4 user inputs for the horizontal and 
+vertical axes start and end points. Style it appropriately. 
+Jessica Hall, UMass Lowell Computer Science, jessica_hall1@student.uml.edu
+Copyright (c) 2021 by Jessica. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by JH on October 21, 2021 at 3:59 PM.
+Github username: jhall00
+
+*/
+
+#info{
+    color: #4aa79f;
+}
+
+#tableDiv{
+    /*allows table to go in scrollable container*/
+    overflow: scroll;
+    max-width: 900px;
+    max-height: 450px;
+    /*Hides empty scrollable div before table is produced*/
+    display:none;
+
+}
+
+.table-bordered th, .table-bordered td {
+    /*Sets border around all the cells*/
+    border: 1px solid rgb(0, 0, 0) 
+}
+
+table thead {
+/*FIxes top axis to stay in view when scrolling*/
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+  
+table thead th:first-child {
+    /*FIxes top left corner so horizontal axis doesn't overlap it when scrolling*/
+    position: sticky;
+    left: 0;
+    z-index: 2;
+}
+  
+table tbody th {
+    /*Fixes the horizontal axis to stay in view when scrolling*/
+    position: sticky;
+    left: 0;
+    z-index: 1;
+}
+ 
+#error{
+    /*Error message color*/
+    color: red;
+}
+
+tr:hover{
+    /*Highlights entire row when mouse goes over a cell*/
+    background: #b7dad7;
+}
+td:hover{
+    /*Hightlight cell when mouse hovers over it*/
+    background: #4aa79f;
+}
+
+th:not(:first-child) { /*leaves top left corner element white*/
+    background-color: #E27d60 !important;
+}
+
+tbody th{
+    background-color: #E27d60 !important;
+}
+  
+  
