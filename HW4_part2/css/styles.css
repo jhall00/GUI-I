@@ -1,0 +1,128 @@
+/*
+File: styles.css
+Created : November 7, 2021
+GUI Assignment: Using the jQuery Plugin/UI with Your Dynamic Table
+Description: Add on from HW 3. Using jQuery UI, add two-way binded sliders and add 
+tabs which the the current table can be added to.
+Jessica Hall, UMass Lowell Computer Science, jessica_hall1@student.uml.edu
+Copyright (c) 2021 by Jessica. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by JH on November 15, 2021 at 11:32 AM.
+Github username: jhall00
+
+*/
+/*Set the jQuery error to red and block display*/
+.error{
+    color:red;
+    display:block;
+}
+
+/*Set the jQuery error message to smaller text (so it fits better) */
+label.error{
+    font-size: smaller;
+}
+
+/*Set the jQuery error message to smaller text (so it fits better) */
+input.error{
+    outline: none !important;
+    border-color: red;
+}
+
+/*Set text at top color*/
+#info{
+    color: #4aa79f;
+}
+.slider{
+    /*Space out sliders under input boxes*/
+    margin-top:10%;
+}
+#tabs div{
+    /*
+    Fixes visual issue of there being a gap between the sticky headers and the edge of the table
+    */
+    padding: 0;
+}
+
+#tabs{
+    /*Hides empty tab panel when page is first loaded (it's empty)*/
+    display:none;
+}
+
+/*
+From https://jqueryui.com/tabs/#manipulation
+*/
+#tabs li .ui-icon-close { 
+    float: left; /*puts x button in top right corner of tab*/
+    cursor: pointer; /*changes cursor when hover over x*/
+}
+
+#tabs input{
+    float: left; /* puts checkbox on left */
+    margin: 5px /* Spacing for box to fit in tab */
+}
+
+
+.myTables{
+    /*allows table to go in scrollable container*/
+    overflow: scroll;
+    max-width: 450px;
+    max-height: 450px;
+
+}
+
+#tableDiv{
+    /*Hides empty scrollable div before table is produced*/
+    display: none;
+    margin-top: 42px;
+}
+
+.table-bordered th, .table-bordered td {
+    /*Sets border around all the cells*/
+    border: 1px solid rgb(0, 0, 0) 
+}
+
+table thead {
+/*FIxes top axis to stay in view when scrolling*/
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+  
+table thead th:first-child {
+    /*Fixes top left corner so horizontal axis doesn't overlap it when scrolling*/
+    position: sticky;
+    left: 0;
+    z-index: 2;
+}
+  
+table tbody th {
+    /*Fixes the horizontal axis to stay in view when scrolling*/
+    position: sticky;
+    left: 0;
+    z-index: 1;
+}
+ 
+#error{
+    /*Error message color*/
+    color: red;
+}
+
+tr:hover{
+    /*Highlights entire row when mouse goes over a cell*/
+    background: #b7dad7;
+}
+td:hover{
+    /*Hightlight cell when mouse hovers over it*/
+    background: #4aa79f;
+}
+
+th:not(:first-child) { /*leaves top left corner element white*/
+    background-color: #E27d60 !important;
+}
+
+tbody th{
+    background-color: #E27d60 !important;
+}
+  
+  
