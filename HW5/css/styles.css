@@ -1,0 +1,156 @@
+/* File: styles.css
+Created : Nov 29, 2021
+GUI Assignment: Implementing a Bit of Scrabble with Drag-and-Drop
+Description: Created a row of scrabble with corresponding bonus spaces. Used jQuery sortable for the boarb spots and for the user's rack.
+Users can drag and drop tiles to and from the rack and the board spaces. Once users submit a word, new tiles are put into the user's 
+rack. I also implemented the option for users to swap out any tiles the wish for new ones from the bag.
+Jessica Hall, UMass Lowell Computer Science, jessica_hall1@student.uml.edu
+Copyright (c) 2021 by Jessica. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+last updated by JH on December 16, 2021 at 5:01 PM.
+Github username: jhall00 */
+
+/* for all tiles */
+li {
+ 
+    width: 74.25px;
+    height: 81px;
+    border: 1px solid black;
+    background: #FFF;
+    /* make list of tiles horizontal */
+    float:left; 
+
+}
+
+/* sumbit word button */
+#refill{
+    background-color:rgb(181, 207, 209);
+    color:black;
+    /* inline so it's next to restart button */
+    display: inline-block;
+    margin-left: 1px;
+    margin-bottom: 5px;
+}
+
+/* swap button */
+#swap{
+    background-color: rgb(255,182,167);
+    /* inline so it's next to submit button */
+    display: inline-block;
+    margin-left: 1px;
+    margin-bottom: 5px;
+}
+
+/* restart button */
+#restart{
+    margin-left: 1px;
+    margin-bottom: 5px;
+}
+
+/* instructions paragraph */
+#write_up, #Instructions{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:15px;
+}
+
+/* score labels and number */
+#totalLabel, #total, #currentTotalLabel, #currentTotal{
+    /* inline so that current and total are next to eachother in the same line */
+    display: inline-block;
+    font-family:Blippo, fantasy;
+    font-size: larger;
+}
+
+/* title */
+#Scrabble{
+    font-family:Blippo, fantasy;
+    font-size:50px;
+    color: rgb(165, 68, 50);
+
+}
+
+/* set color for total score text */
+#totalLabel, #total{
+    color: rgb(204,150,90);
+
+}
+
+/* Current score label */
+#currentTotalLabel{
+    /* push label for current score to the right of total score */
+    margin-left: 15px;
+}
+
+/* set color for current score text */
+#currentTotalLabel, #currentTotal{
+    color: rgb(165, 68, 50);
+
+}
+
+#gap_alert{
+    /* hide alert until we have an gapEroror (enabled in js) */
+    visibility: hidden;
+    /* want message next to submit word button */
+    display:inline;
+    padding: 6px;
+}
+
+/* swap area */
+#garbage {
+    font-size: 1.2em;
+    height: 100px;
+    width: 600px;
+    border: 1px solid red;
+    /* get rid of bullets */
+    list-style: none;
+    /* display next to rack */
+    display: inline-block;
+    background-image:url("../images/Garbage_img.png") ;
+}
+
+#rack{
+    height: 100px;
+    width: 600px;
+    /* get rid of bullets */
+    list-style: none;
+    margin: 0 5px 5px 5px;
+    background-image: url("../images/rack.png");
+    /* sets image size to same size as rack sortable */
+    background-size: 600px 100px;
+    /* display next to rack */
+    display: inline-block;
+}
+
+/* each space of the board */
+.boardSpot {
+    padding: 0;
+    width: 74.25px;
+    height: 81px;
+    border: 1px solid black;
+    /* get rid of bullets */
+    list-style: none;
+    /* make list of tiles horizontal */
+    float:left;
+    /* sets image size to fit board spot */
+    background-size: 74.25px 81px;
+
+}
+
+.tile{
+    background-size: 74.25px 81px;
+}
+
+/* other regular board spaces */
+#space1, #space2, #space4, #space5, #space6, #space8, #space10, #space11, #space12, #space14, #space15{
+    background-image: url("../images/space1.png");
+}
+
+/* double word spaces */
+#space3, #space13{
+    background-image: url("../images/double_word_space.png");
+}
+
+/* double letter spaces */
+#space7, #space9{
+    background-image: url("../images/double_letter_space.png");
+}
